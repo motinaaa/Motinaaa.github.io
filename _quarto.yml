@@ -1,5 +1,17 @@
 project:
-  title: "Motinaaa.github.io"
+  type: website
+  
+  output-dir: docs
+website:
+  title: "mysite"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
 
-editor: visual
-
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
