@@ -1,11 +1,26 @@
 ---
-title: "Motinaaa.github.io"
+title: "Motina Kashanian"
+image: me.jpg
+about: 
+  template: trestles
+  image-shape: rounded
+  image-width: 15em
+  links:
+    - text: LinkedIn
+      href: https://www.linkedin.com/in/motahareh-kashanian-90412014a/
+    - text: Twitter
+      href: https://twitter.com/motiinaa
+    - text: GitHub
+      href: https://github.com/motinaaa
+    - text: Email
+      href: mailto:motinaa@iastate.edu
+    - text: GoogleScholar
+      href: https://scholar.google.com/citations?user=rARpLhMAAAAJ&hl=en
+    - text: Orchid
+      href: https://orcid.org/0009-0000-9318-6382
 ---
 
-## Quarto
+## Welcome to My Personal Site
+My name is Motahareh Kashanian, Feel free to call me Motina!
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-```{r}
-1 + 1
-```
+---

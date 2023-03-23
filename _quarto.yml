@@ -7,7 +7,7 @@ website:
   navbar:
     title: Motina Kashanian
     right:
-      - href: index.qmd
+      - href: Motinaaa.github.io.qmd
         text: Home
       - about.qmd
       - blog.qmd
