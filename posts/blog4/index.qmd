@@ -1,0 +1,109 @@
+---
+author: "Motina"
+title: "Split-Apply-Combine"
+categories: "Split-apply-combine"
+date: "2023-03-01"
+output: github_document
+---
+![](tumbnail.jpeg)
+<!-- badges: start -->
+[![Frontmatter check](../../actions/workflows/check-yaml.yaml/badge.svg)](../../actions/workflows/check-yaml.yaml)
+[![Render rmarkdown](../../actions/workflows/render-rmarkdown.yaml/badge.svg)](../../actions/workflows/render-rmarkdown.yaml)
+<!-- badges: end -->
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Prompt:
+
+The `plyr` package has by now been replaced by other, even faster
+packages, but the idea of *Split, apply, combine* is as relevant as
+ever.
+
+Read the paper [The Split-Apply-Combine Strategy for Data
+Analysis](https://www.jstatsoft.org/article/view/v040i01) by Hadley
+Wickham.
+
+Write a blog post addressing the following questions:
+
+1.  The R code for the split-apply-combine paper is posted with the
+    paper. Pick one of the examples demonstrating `plyr` functionality
+    (such as `dlply` or `ddply`, ...) and rewrite the example using
+    functionality from the package `dplyr`. Make sure that your example
+    works and the results are identical.
+    
+For the baseball case study, the goal is to calculate the "career year", that is the number of years since the player started playing, for all players with `ddply`. 
+
+```{r}
+#library("plyr")
+#baseball <- ddply(baseball, .(id), transform, 
+#cyear = year - min(year) + 1)
+```
+
+The same thing can be done with 'dplyr' by grouping the data based on the same IDs, mutating cyear column with the formula, arranging the rows according to the IDs, then ungrouping the data set.
+
+```{r}
+#library("dplyr")
+#baseball <- baseball %>% group_by(id) %>% mutate(cyear = year - min(year) + 1) %>% arrange(baseball$id) %>% ungroup(id)
+```
+
+A linear model was fitted to each player in the next example with `dlply`.
+
+```{r}
+#library("plyr")
+#library("dplyr")
+#library("tidyverse")
+#library("broom")
+#library("tidyr")
+#library("ggplot2")
+#library("purrr")
+#library("reshape2")
+#source("v40i01.R")
+#model <- function(df) { lm (rbi / ab ~ cyear, data=df, na.action=na.omit) }
+#bmodels <- dlply(baseball, .(id), model)
+```
+
+We can do the same thing with `dplyr`. 
+
+```{r}
+#library("dplyr")
+#library("reshape2")
+#library("ggforce")
+#source("v40i01.R")
+#bmodels <- baseball %>% group_by(id) %>% do(bmodels = lm(rbi / ab ~ cyear, data = baseball))
+```
+2.  Which (base R) functions do you know that support the
+    split-apply-combine strategy? In your opinion, are these sufficient?
+    State why or why not?
+    
+Prior to this, I just used apply() and lapply(). 
+Since we work with different inputs and want different outputs, we need more functions to get different outputs. There may also be times when we need to do some functions on a part of data, not all, as well as different functions on different parts of data. Hence, we should split up the data into manageable pieces, analyze each piece individually and incorporate them back together. Therefore, these two functions are not enough.
+
+3. The ChatGPT response to the prompt "Describe the split-apply-combine paradigm" is given below. Generally, the chatbot's answers are decent. ChatGPT does have problems getting details right. Which details would you change in the response? 
+
+    
+>    The "split-apply-combine" paradigm is a data analysis strategy used in statistics and data science to analyze **grouped data**. It consists of three steps:
+*Grouped data term is not really my cup of tea, we use split-apply-combine to break up large problems into manageable pieces, our big problem could be grouped or not.We can split whatever data object we have into meaningful chunks*.
+
+>    Split: The data is first split into *groups* based on one or more variables of interest.
+*I would personally go for subsets instead of groups. In addition, it should be mentioned that in split phase we can coerces a data-frame to a list of vectors, divide a vector or data-frame into the groups defined by a factor, split a vector or the column of a data-frame into the groups defined by a factor.*
+
+>    Apply: A specific operation or function is applied to each group of data, usually for the purpose of aggregating, summarizing, or transforming the data within each group.
+*It's important to mention the inputs and outputs, because we can apply a function to the margins of an array, each cell of a ragged array, over a list or vector, and so forth. We can actually apply the function of interest to each element in our divisions.*
+
+> Combine: The results of the operation applied to each group are then combined and returned as a *single* output.
+*We can have different kinds of outputs, we can combine the results into a new object of the desired structure*
+
+> The split-apply-combine paradigm is particularly useful in cases where the data cannot be analyzed as a whole and instead must be analyzed in smaller, more manageable chunks. This allows for more efficient data processing and improved scalability. The paradigm is commonly implemented using tools such as the "groupby" function in the R and Python programming languages, and the "dplyr" library in R.
+*It should be mention that `Group_by()` function belongs to the `dplyr` package, and `dplyr` is the next iteration of `plyr`, focusing on only data frames. *
+
+**
+You can write your answers directly the `README.Rmd` file. 
+Make sure that the file knits (you will need to activate any packages your use in your code chunks with a call to `library(xxx)`, where xxx is the name of the package, such as `plyr` ).
+Commit your changes and push to your repo;  add any files in the `README_files` directory to your repository. 

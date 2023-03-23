@@ -1,32 +1,32 @@
 project:
   type: website
-  
   output-dir: docs
+
 website:
   title: "mysite"
   navbar:
-    title: Motina Kashanian # this is the website title as it appears in the top left corner -- clicking on this will jump you back to your landing page from where ever you are
-    right: # align navbar items to the right/left/center
+    title: Motina Kashanian
+    right:
       - href: index.qmd
-        text: home # use 'text' option to update the name as you want it to appear in your navbar
+        text: Home
       - about.qmd
-      - resources.qmd
+      - blog.qmd
       - href: CV.pdf
-        text: cv
-      - icon: github # add icons that link to social media, etc.
+        text: CV
+      - icon: github
         href: https://github.com/motinaaa
       - icon: twitter
         href: https://twitter.com/motiinaa
-        
-        
-  page-footer: 
+  page-footer:
     background: light
-    left: 
+    left:
       - "Copyright 2023, Motina Kashanian"
-
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme:
+      - mystyles.scss
+    css: 
+      - motina.css
+    mainfont: Montserrat
     toc: true

@@ -1,0 +1,137 @@
+/* Main settings */
+
+:root {
+  --font-body:   "Roboto",-apple-system,BlinkMacSystemFont,roboto,segoe ui,Helvetica,Arial,sans-serif;
+  --font-header: "Fira Sans Condensed",Tahoma,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --font-mono:   SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;
+
+  --color-background:   #EAE9EA;
+  --color-primary:      #74a08a;
+  --color-primary-dark: #2F4238;
+  --color-secondary:    #8a74a0;
+  --color-tertiary:     #a08a74;
+  --color-text:         #172a3a;
+  --color-white:        #FFFFFF;
+}
+
+html body {
+    background-color: var(--color-background);
+    font-family: var(--font-body);
+}
+
+html h1,h2,h3,h4 {
+    font-family: var(--font-header);
+    font-weight: bold;
+}
+
+a:hover, a:focus {
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+/* page title */
+
+#title-block-header.quarto-title-block.default .quarto-title .title {
+    font-size: 50px;
+}
+
+/* toc */
+
+.sidebar nav[role=doc-toc]>ul li a {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.sidebar nav[role=doc-toc]>ul li a:hover, a:focus {
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+/* Navbar */
+
+.navbar-dark .navbar-nav .nav-link {
+    font-family: var(--font-header);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar-dark .navbar-brand {
+    font-family: var(--font-header);
+    font-weight: bold;
+}
+
+.navbar #quarto-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon {
+    font-weight: bold;
+}
+
+.panel-caption, .figure-caption {
+    color: #828282;
+}
+
+/* For floating images - see lab page, for example */
+
+.float-left img {
+    float:left;
+    padding: 5px 10px 5px 0px;
+}
+
+.float-right img {
+    float:right;
+    padding: 5px 0px 5px 10px;
+}
+
+/* Link buttons */
+
+.icon-link {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 3px 5px 3px 5px;
+    margin: 0 2px 0 2px;
+    text-decoration: none;
+    border-radius: 5px; /* Rounded edges */
+}
+
+.icon-link:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.icon-link-details {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    padding: 3px 5px 3px 5px;
+    margin: 0 2px 0 2px;
+    border-radius: 5px; /* Rounded edges */
+}
+
+.icon-link-details:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+/* Code chunks */
+
+/* Chunk output */
+
+d-article pre {
+  overflow: auto !important;
+  border-radius: 5px; /* Rounded edges */
+  font-size: 12px;
+  color: #fff;
+  background-color: #696969;
+  padding: 5px 5px 5px 18px;
+}
+
+/* Chunk code */
+
+d-article div.sourceCode pre {
+  overflow: auto !important;
+  border-radius: 5px; /* Rounded edges */
+  background-color: #fff;
+  color: black;
+  padding: 5px 5px 5px 18px;
+}
+
+d-article div.sourceCode {
+  background-color: transparent;
+}

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>mysite - About me</title>
+<title>mysite - Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -58,12 +60,42 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="motina.css">
 </head>
 
-<body class="floating nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -84,11 +116,11 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page">
+    <a class="nav-link" href="./about.html">
  <span class="menu-text">About me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html">
+    <a class="nav-link active" href="./blog.html" aria-current="page">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -114,25 +146,16 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#data-science-choice-modeling" id="toc-data-science-choice-modeling" class="nav-link active" data-scroll-target="#data-science-choice-modeling">Data Science, &amp; Choice Modeling</a></li>
-  <li><a href="#music" id="toc-music" class="nav-link" data-scroll-target="#music">Music</a></li>
-  </ul>
-</nav>
-</nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    </div>
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="All that legal stuff...">All that legal stuff... <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ethics and Reproducibility...">Ethics and Reproducibility... <span class="quarto-category-count">(1)</span></div><div class="category" data-category="More on reproducibility...">More on reproducibility... <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Split-apply-combine">Split-apply-combine <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About me</h1>
+<h1 class="title">Blog</h1>
 </div>
 
 
@@ -147,24 +170,157 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Welcome to my personal website! I am a researcher, engineer, choice modeler.</p>
-<p>I graduated from Amirkabir University of Technology in 2016 with a B.Sc. in Industrial Engineering. During this time, I started developing my mathematical modeling and machine learning skills. One year later I started the M.Sc. program in Industrial and Systems Engineering at Iran University of Science and Technology which I completed in 2020. While completing this degree, I worked on a sourcing plan for a sustainable biomass portfolio using multi-stage stochastic programming, including land-use suitability analyses using geographic information systems in order to ensure the continuity of biomass supply in the Iran’s bioethanol supply chain. I was able to publish my work in a peer-reviewed journal as the lead author. A desire to integrate supply chain and artificial intelligence led me to pursue a doctoral degree in Industrial and Manufacturing Systems Engineering at Iowa State University in 2021. As part of my academic journey, I have acquired several different skills, including supply-chain design and management, analytical and problem-solving skills, mathematical programming, simulations, and data mining techniques. In my role as a research assistant under the direction of Dr.&nbsp;Sarah Ryan, I worked on a project funded by the National Science Foundation under Grants No.&nbsp;DGE- 1828942andEFMA-2132200.As a part of my research, I designed a supply chain for a novel monomer, which has gained increasing interest due to its ability to replace adipic acid in Nylon 6,6 and produce polyamides with superior performance. Green electrochemistry is used to produce this monomer, a method which has shown promising results in the conversion of biomass into commodities. As a means of ensuring the successful commercialization of this product, I designeda proper supplychain that is both economically and environmentally beneficial. In addition to starting my Ph.D.&nbsp;in the first semester, I also became an NSF-funded DataFEWSion graduate trainee at Iowa State University. This is an interdisciplinary graduate traineeship focused on research at the nexus of Food, Energy and Water Systems (FEWS). This program provides me with an opportunity to gain analytical skills such as data-driven decision modeling and an understanding of the complexity of the FEWS nexus, in addition to professional skills and communication abilities. I am nearing the end of the fourth semester of my PhD program and I plan on publishing two first-authored papers in peer-reviewed journals, as well as making significant contributions to two other peer-reviewed publications. The focus of my future research will be on the Food-Energy-Water Nexus, specifically the use of biomass for producing desired chemicals to promote the adoption of green electrochemistry in the chemical industry, in addition to facilitating the implementation of distributed electrochemical manufacturing processes by developing an optimized supply chain. I believe that this timely effort will lead to the decarbonization of the U.S. chemical industry, transform the power for chemical industries, and advance American chemical manufacturing leadership. In addition, I intend to improve crop production, particularly for corn and soybeans, by optimizing genotypes, environments, and management practices by integrating weather information throughout the growing season and utilizing deep learning frameworks to predict yields. It is also imperative that my research be conducted in order to address the challenges posed by growing populations, decreasing cropland, and climate change, all of which are negatively affecting agriculture and making crop breeding more necessary than ever before. A key aspect of my research will be to develop a problem-solving framework that can be applied to a wide range of Food-Energy-Water Nexus research topics, including supply chain management, crop yield prediction for sustainable agriculture, and energy management in electrical power systems. To make better predictions and decisions from data, I plan to combine optimization, simulation, statistics, and machine learning techniques. Having experience in biomass and agricultural residues, I can leverage renewable energy across the supply chain to reduce long-term costs, mitigate risks, increase revenue, and increase employee engagement. As technologies and regulations continue to evolve, I am confident that I can assist companies in developing strategies that take advantage of these benefits.</p>
-<p>You can also see more about my background on my <a href="CV.pdf"><strong>CV</strong></a> and <a href="CV.pdf"><strong>Resume</strong></a>.</p>
-<section id="data-science-choice-modeling" class="level1">
-<h1>Data Science, &amp; Choice Modeling</h1>
-<p>You can see more of my projects and source code on my GitHub page: <a href="https://github.com/motinaaa/">https://github.com/motinaaa/</a></p>
-</section>
-<section id="music" class="level1">
-<h1>Music</h1>
-<p>Music was my earliest passion. I grew up playing piano, violin, and mandolin, and I have had the privilege of studying and performing with some incredible musicians. In high school I had the honor of studying violins with the legendary Dora Marshall Mullins of Virginia Beach, VA, and I have played in multiple ensembles, including the <a href="http://www.symphonicity.org/">Virginia Beach Symphony Orchestra</a> (now “Symphonicity”), the <a href="http://www.music.vt.edu/ensembles/nrvs/">New River Valley Symphony</a> at Virginia Tech, the <a href="http://www.music.ntnu.edu.tw/orchestra/eng/">National Taiwan Normal University Symphony</a>, and the <a href="http://alluniversityorchestra.org/">All University Orchestra</a> at Carnegie Mellon University. I am also a self-taught mandolinist and guitarist and enjoy playing jazz and bluegrass. I have fortunately had many opportunities to play with some wonderful jazz friends, including the <a href="http://www.muddybasin.com/">Muddy Basin Ramblers</a> (a New Orleans-style jazz band in Taipei) and the <a href="http://www.hotclubofbeijing.com/fr_home.cfm">Hot Club of Beijing</a> (a gypsy swing band based in China’s capital).</p>
-<p>Thanks for visiting my site, and I am grateful for any feedback you may have!</p>
-<p>Cheers,</p>
-<p>John (章乐汉)</p>
 
 
-</section>
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="All that legal stuff..." data-listing-date-sort="1678341600000" data-listing-file-modified-sort="1679600009518" data-listing-reading-time-sort="10.675">
+<div class="thumbnail">
+<p><a href="./posts/blog7/index.html"> <img src="./posts/blog7/tumbnail.webp" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/blog7/index.html">
+<h3 class="no-anchor listing-title">
+La la la license
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('All that legal stuff...'); return false;">
+All that legal stuff…
+</div>
+</div>
+<a href="./posts/blog7/index.html">
+<div class="listing-description">
+ <!-- README.md is generated from README.Rmd. Please edit that file --> <!-- badges: start -->   <!-- badges: end -->
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/blog7/index.html">
+<div class="listing-date">
+Mar 9, 2023
+</div>
+<div class="listing-author">
+Motina
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="More on reproducibility..." data-listing-date-sort="1677736800000" data-listing-file-modified-sort="1679600123104" data-listing-reading-time-sort="2.255">
+<div class="thumbnail">
+<p><a href="./posts/blog6/index.html"> <img src="./posts/blog6/tumbnail.jpeg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/blog6/index.html">
+<h3 class="no-anchor listing-title">
+Badge is Coool!
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('More on reproducibility...'); return false;">
+More on reproducibility…
+</div>
+</div>
+<a href="./posts/blog6/index.html">
+<div class="listing-description">
+ <!-- README.md is generated from README.Rmd. Please edit that file --> <!-- badges: start -->   <!-- badges: end -->
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/blog6/index.html">
+<div class="listing-date">
+Mar 2, 2023
+</div>
+<div class="listing-author">
+Motina
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="Split-apply-combine" data-listing-date-sort="1677650400000" data-listing-file-modified-sort="1679600449129" data-listing-reading-time-sort="4.16">
+<div class="thumbnail">
+<p><a href="./posts/blog4/index.html"> <img src="./posts/blog4/tumbnail.jpeg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/blog4/index.html">
+<h3 class="no-anchor listing-title">
+Split-Apply-Combine
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Split-apply-combine'); return false;">
+Split-apply-combine
+</div>
+</div>
+<a href="./posts/blog4/index.html">
+<div class="listing-description">
+  <!-- badges: end -->
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/blog4/index.html">
+<div class="listing-date">
+Mar 1, 2023
+</div>
+<div class="listing-author">
+Motina
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="Ethics and Reproducibility..." data-listing-date-sort="1677132000000" data-listing-file-modified-sort="1679600518409" data-listing-reading-time-sort="3.38">
+<div class="thumbnail">
+<p><a href="./posts/blog5/index.html"> <img src="./posts/blog5/tumbnail.jpeg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/blog5/index.html">
+<h3 class="no-anchor listing-title">
+The One Where Ethics Meet Reproducibility
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Ethics and Reproducibility...'); return false;">
+Ethics and Reproducibility…
+</div>
+</div>
+<a href="./posts/blog5/index.html">
+<div class="listing-description">
+ 
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/blog5/index.html">
+<div class="listing-date">
+Feb 23, 2023
+</div>
+<div class="listing-author">
+Motina
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

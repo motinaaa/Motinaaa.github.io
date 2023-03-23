@@ -1,0 +1,39 @@
+/*-- scss:defaults --*/
+
+// Colors
+$light-sage-green: #D1D9CE;
+$dark-sage-green: #98A08D;
+$cream: #FDFBF7;
+$gray: #64605f;
+$light-gray: #949799;
+$purple: #AE8BD1;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+$font-size-root: 1.06rem;
+$h1-font-size: 33px;
+$h1-font-weight: 500;
+
+
+// Base document colors
+$navbar-bg: $cream; // navbar
+$navbar-fg: $dark-sage-green; // navbar foreground elements
+$navbar-hl: $purple; // highlight color when hovering over navbar links
+$body-bg: $light-sage-green; // page background 
+$body-color: $gray; // page text 
+$footer-bg: $cream; // footer 
+$link-color: $purple; // hyperlinks 
+
+// Inline code
+$code-bg: $cream; // inline code background color
+$code-color: $purple; // inline code text color
+
+// Code blocks
+$code-block-bg-alpha: -.8; // code block background color
+
+
+
+
+
+
+
