@@ -5,10 +5,25 @@ project:
 website:
   title: "mysite"
   navbar:
-    left:
+    title: Motina Kashanian # this is the website title as it appears in the top left corner -- clicking on this will jump you back to your landing page from where ever you are
+    right: # align navbar items to the right/left/center
       - href: index.qmd
-        text: Home
+        text: home # use 'text' option to update the name as you want it to appear in your navbar
       - about.qmd
+      - resources.qmd
+      - href: CV.pdf
+        text: cv
+      - icon: github # add icons that link to social media, etc.
+        href: https://github.com/motinaaa
+      - icon: twitter
+        href: https://twitter.com/motiinaa
+        
+        
+  page-footer: 
+    background: light
+    left: 
+      - "Copyright 2023, Motina Kashanian"
+
 
 format:
   html:
