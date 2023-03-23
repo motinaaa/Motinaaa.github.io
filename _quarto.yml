@@ -15,8 +15,7 @@ website:
         text: CV
       - icon: github
         href: https://github.com/motinaaa
-      - icon: twitter
-        href: https://twitter.com/motiinaa
+
   page-footer:
     background: light
     left:
@@ -28,5 +27,4 @@ format:
       - mystyles.scss
     css: 
       - motina.css
-    mainfont: Montserrat
     toc: true

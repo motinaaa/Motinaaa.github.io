@@ -8,29 +8,28 @@ format:
     toc-title: "Table of contents"
 ---
 
+# Education
+Welcome to my personal website! I'm a researcher, engineer, and soon to be singer!
 
-Welcome to my personal website! I am a researcher, engineer, choice modeler.
+I graduated from Amirkabir University of Technology in 2016 with a B.Sc. in Industrial Engineering. During this time, I started developing my mathematical modeling and machine learning skills. 
 
-I graduated from Amirkabir University of Technology in 2016 with a B.Sc. in Industrial Engineering. During this time, I started developing my mathematical modeling and machine learning skills. One year later I started the M.Sc. program in Industrial and Systems Engineering at Iran University of Science and Technology which I completed in 2020. While completing this degree, I worked on a sourcing plan for a sustainable biomass portfolio using multi-stage stochastic programming, including land-use suitability analyses using geographic information systems in order to ensure the continuity of biomass supply in the Iran’s bioethanol supply chain. I was able to publish my work in a peer-reviewed journal as the lead author.
-A desire to integrate supply chain and artificial intelligence led me to pursue a doctoral degree in Industrial and Manufacturing Systems Engineering at Iowa State University in 2021. As part of my academic journey, I have acquired several different skills, including supply-chain design and management, analytical and problem-solving skills, mathematical programming, simulations, and data mining techniques. In my role as a research assistant under the direction of Dr. Sarah Ryan, I worked on a project funded by the National Science Foundation under Grants No. DGE- 1828942andEFMA-2132200.As a part of my research, I designed a supply chain for a novel monomer, which has gained increasing interest due to its ability to replace adipic acid in Nylon 6,6 and produce polyamides with superior performance. Green electrochemistry is used to produce this monomer, a method which has shown promising results in the conversion of biomass into commodities. As a means of ensuring the successful commercialization of this product, I designeda proper supplychain that is both economically and environmentally beneficial.
-In addition to starting my Ph.D. in the first semester, I also became an NSF-funded DataFEWSion graduate trainee at Iowa State University. This is an interdisciplinary graduate traineeship focused on research at the nexus of Food, Energy and Water Systems (FEWS). This program provides me with an opportunity to gain analytical skills such as data-driven decision modeling and an understanding of the complexity of the FEWS nexus, in addition to professional skills and communication abilities. I am nearing the end of the fourth semester of my PhD program and I plan on publishing two first-authored papers in peer-reviewed journals, as well as making significant contributions to two other peer-reviewed publications.
- The focus of my future research will be on the Food-Energy-Water Nexus, specifically the use of biomass for producing desired chemicals to promote the adoption of green electrochemistry in the chemical industry, in addition to facilitating the implementation of distributed electrochemical manufacturing processes by developing an optimized supply chain. I believe that this timely effort will lead to the decarbonization of the U.S. chemical industry, transform the power for chemical industries, and advance American chemical manufacturing leadership.
-In addition, I intend to improve crop production, particularly for corn and soybeans, by optimizing genotypes, environments, and management practices by integrating weather information throughout the growing season and utilizing deep learning frameworks to predict yields. It is also imperative that my research be conducted in order to address the challenges posed by growing populations, decreasing cropland, and climate change, all of which are negatively affecting agriculture and making crop breeding more necessary than ever before.
-A key aspect of my research will be to develop a problem-solving framework that can be applied to a wide range of Food-Energy-Water Nexus research topics, including supply chain management, crop yield prediction for sustainable agriculture, and energy management in electrical power systems. To make better predictions and decisions from data, I plan to combine optimization, simulation, statistics, and machine learning techniques. Having experience in biomass and agricultural residues, I can leverage renewable energy across the supply chain to reduce long-term costs, mitigate risks, increase revenue, and increase employee engagement. As technologies and regulations continue to evolve, I am confident that I can assist companies in developing strategies that take advantage of these benefits.
+One year later I started the M.Sc. program in Industrial and Systems Engineering at Iran University of Science and Technology which I completed in 2020. While completing this degree, I worked on a sourcing plan for a sustainable biomass portfolio using multi-stage stochastic programming, including land-use suitability analyses using geographic information systems in order to ensure the continuity of biomass supply in the Iran’s bioethanol supply chain. I was able to publish my work in a peer-reviewed journal as the lead author.
 
-You can also see more about my background on my [**CV**](CV.pdf) and [**Resume**](CV.pdf).
+A desire to integrate supply chain and artificial intelligence led me to pursue a doctoral degree in Industrial and Manufacturing Systems Engineering at Iowa State University in 2021. As part of my academic journey, I have acquired several different skills, including supply-chain design and management, analytical and problem-solving skills, mathematical programming, simulations, and data mining techniques. 
 
-# Data Science, & Choice Modeling
+# Research Interests
+A key aspect of my research will be to develop a problem-solving framework that can be applied to a wide range of Food-Energy-Water Nexus research topics, including supply chain management, crop yield prediction for sustainable agriculture, and energy management in electrical power systems. To make better predictions and decisions from data, I plan to combine optimization, simulation, statistics, and machine learning techniques. 
 
-You can see more of my projects and source code on my GitHub page: [https://github.com/motinaaa/](https://github.com/motinaaa/)
+You can also see more about my background on my [**CV**](CV.pdf).
 
-# Music
 
-Music was my earliest passion. I grew up playing piano, violin, and mandolin, and I have had the privilege of studying and performing with some incredible musicians. In high school I had the honor of studying violins with the legendary Dora Marshall Mullins of Virginia Beach, VA, and I have played in multiple ensembles, including the [Virginia Beach Symphony Orchestra](http://www.symphonicity.org/) (now "Symphonicity"), the [New River Valley Symphony](http://www.music.vt.edu/ensembles/nrvs/) at Virginia Tech, the [National Taiwan Normal University Symphony](http://www.music.ntnu.edu.tw/orchestra/eng/), and the [All University Orchestra](http://alluniversityorchestra.org/) at Carnegie Mellon University. I am also a self-taught mandolinist and guitarist and enjoy playing jazz and bluegrass. I have fortunately had many opportunities to play with some wonderful jazz friends, including the [Muddy Basin Ramblers](http://www.muddybasin.com/) (a New Orleans-style jazz band in Taipei) and the [Hot Club of Beijing](http://www.hotclubofbeijing.com/fr_home.cfm) (a gypsy swing band based in China's capital).
+# Personal intersts
+
+I have a few passions in life that I absolutely love. Singing is at the top of my list - it's such a freeing experience. When I'm not singing, I'm usually lost in a good book or catching up on my favorite movies and TV shows. And when it comes to fashion, I love experimenting with different colors and expressing myself through my outfits. 
 
 Thanks for visiting my site, and I am grateful for any feedback you may have!
 
 Cheers,
 
-John (章乐汉)
+Motina (موتینا)
 

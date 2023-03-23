@@ -8,8 +8,6 @@ about:
   links:
     - text: LinkedIn
       href: https://www.linkedin.com/in/motahareh-kashanian-90412014a/
-    - text: Twitter
-      href: https://twitter.com/motiinaa
     - text: GitHub
       href: https://github.com/motinaaa
     - text: Email
@@ -26,6 +24,5 @@ My name is Motahareh Kashanian, Feel free to call me Motina!
 I'm an industrial engineering PhD student specializing in supply chain design and management. However, I've always felt the need to visualize the results of my work in a tangible way with colors and graphics to truly feel the impact of my efforts. That's why I'm exploring how to combine operations research, data analytics, and visualization to solve real-world problems that positively impact people's lives.
 
 Although this journey can be challenging, I'm committed to making the most of this opportunity and collaborating with other experts to make a real difference. Let's go out there and make a change together!
-
 
 ---
